@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Profili Düzenle</h3>
+<hr>
+{% from "includes/formshelpers.html" import render_field %}
+
+<form method = "post">
+    {{ render_field(form.newusername,class = "form-control") }}
+    {{ render_field(form.newname,class = "form-control") }}
+    {{ render_field(form.newemail,class = "form-control") }}
+    {{ render_field(form.newpassword,class = "form-control") }}
+  <button type="submit" class="btn btn-primary">Profili Güncelle</button>
+</form>
+
+
+{% endblock body %}
